@@ -3,15 +3,20 @@ from django.conf.urls.static import static
 from django.conf import settings
 from . import views
 
+
 app_name = 'djangoapp'
 urlpatterns = [
+    path('', views.home_view, name='home'),
+
     # route is a string contains a URL pattern
     # view refers to the view function
     # name the URL
 
     # path for about view
+    path('about', views.about_view, name='about'),
 
     # path for contact us view
+    path('contact', views.about_view, name='contact'),
 
     # path for registration
 
